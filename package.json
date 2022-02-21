@@ -1,0 +1,20 @@
+{
+  "name": "actions-bash-with-post",
+  "description": "A GitHub Action for executing a simple bash script with optional post-run",
+  "version": "0.1.0",
+  "author": "Incognia",
+  "main": "dist/run/index.js",
+  "scripts": {
+    "build": "ncc build -o dist/run src/run.ts && ncc build -o dist/post src/post.ts"
+  },
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "@actions/exec": "^1.1.0",
+    "@actions/io": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.19",
+    "@vercel/ncc": "^0.23.0",
+    "typescript": "^4.3.5"
+  }
+}
