@@ -1,0 +1,17 @@
+name: Bash with Post
+author: Incognia
+description: Run simple bash scripts with post-run
+inputs:
+  prelude:
+    description: The script to include before all scripts
+    required: false
+  run:
+    description: The script to run
+    required: false
+  post-run:
+    description: The script to run on job post phase
+    required: false
+runs:
+  using: node16
+  main: dist/run/index.js
+  post: dist/post/index.js
